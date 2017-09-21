@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>  
+  <head>
+  	<meta charset="utf-8" />
+    <title>异步调用JSON</title>  
+  </head>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+  <script type="text/javascript">  
+  <!--  
+   var xmlhttp;  
+    // 创建XMLHTTPRequest对象  
+    function createXMLHTTPRequest()  
+    {  
+         if(window.ActiveXObject)//②如果当前浏览器为IE  
+         {  
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");  
+         }  
+         else if(window.XMLHttpRequest)//③如果是其他浏览器  
+         {  
+            xmlhttp = new XMLHttpRequest();  
+         }else  
+         {  
+             alert("Your browser does not support XMLHTTP.");  
+        }  
+    }  
+      
+    function getInfo()  
+    {  
+      createXMLHTTPRequest();  
+      xmlhttp.open("get", "http://apis.baidu.com/apistore/aqiservice/aqi?city=济南", true);  
+      xmlhttp.setRequestHeader("apikey","ea6b889b29fb2c99c82fc5215e8e6283");
+      xmlhttp.onreadystatechange = returnInfo;
+      xmlhttp.send();  
+    }  
+      
+    function returnInfo()  
+    {  
+      if(xmlhttp.readyState == 4 && xmlhttp.status==200)  
+      {  
+       var info = xmlhttp.responseText; 
+       document.getElementById("location").innerHTML=info;
+       var obj = eval('('+info+')'); 
+//     alert(obj.retData);
+       var city=obj.retData.city;  
+       var aqi=obj.retData.aqi;  
+//     var core=obj.reData.core;    
+       document.getElementById("showInfo").innerHTML = city;  
+       document.getElementById("salesphone").innerHTML = aqi;  
+//     document.getElementById("location").innerHTML=core;  
+      }  
+    }  
+  
+  -->  
+  </script>  
+  <body>  
+    
+  <br/><br/>  
+  <h2 style="color: red;">异步调用JSON</h2>  
+  <br/><input type="button" value="获取JSON数据" onclick="getInfo()" />  
+   <table>  
+    <tr>  
+    <td><div id="showInfo"></div></td>  
+    <td><span id="salesphone"><span></td>  
+    <td><span id="location"><span></td>  
+    </tr>  
+   </table>  
+  </body>  
+</html>  

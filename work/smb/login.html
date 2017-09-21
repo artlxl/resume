@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <script type="text/javascript" src="js/index.js" ></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!--<script src="js/modernizr.custom.js"></script>--><!--弹出对话框插件-->
+    
+    <title>ATMEN</title>
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body style="padding-top: 50px;padding-bottom: 0;">
+  	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">ATMEN</a>
+	    </div>
+	
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    	   <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#"><span class="glyphicon glyphicon-user"></span>登录/注册</a></li>
+		   </ul>
+	      <ul class="nav navbar-nav navbar-left">
+	        <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品 <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">鼻子</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">大脑</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">爪子</a></li>
+	          </ul>
+	        </li>
+	        <li class=""><a href="#">APP</a></li>
+	        <li class=""><a href="#">资讯</a></li>
+	        <li class=""><a href="#">关于</a></li>
+	        
+	      </ul>    
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+    <section class="container-fluid login ">
+    	<div class="row">
+    		<div class="login-box">
+    			<div class="tabs tabs-style-topline" >
+					<nav>
+						<ul>
+							<li><a href="#section-topline-1" ><span>登录</span></a></li>
+							<li><a href="#section-topline-2" ><span>注册</span></a></li>
+							<!--<li><a href="#section-topline-3" class="icon icon-upload"><span>Upload</span></a></li>-->
+							<!--<li><a href="#section-topline-4" class="icon icon-coffee"><span>Work</span></a></li>-->
+							<!--<li><a href="#section-topline-5" class="icon icon-config"><span>Settings</span></a></li>-->
+						</ul>
+					</nav>
+					<div class="content-wrap">
+						<section id="section-topline-1">
+							<form id="login-form" class="form-vertical" method="post" action="/login_check" >          
+						        <div class="form-group">
+						          <label class="control-label" for="login_username">帐号</label>
+						          <div class="controls">
+						            <label class="fa-label">
+						              <i class="fa fa-user"></i>
+						            </label>
+						            <input class="form-control" id="login_username" type="text" name="_username" value="" required placeholder='邮箱/手机/用户名' />
+						             <div class="help-block"></div>
+						          </div>
+						        </div>
+						        <div class="form-group">
+						          <label class="control-label" for="login_password">密码</label>
+						          <div class="controls">
+						            <label class="fa-label">
+						              <i class="fa fa-unlock-alt"></i>
+						            </label>
+						            <input class="form-control" id="login_password" type="password" name="_password" required placeholder='密码'/>
+						          </div>
+						        </div>
+						
+						        <div class="form-group">
+						          <div class="controls">
+						            <span class="checkbox">
+						              <label class="pull-left"> <input type="checkbox" name="_remember_me" checked="checked" style="margin-top: 5px;"> 记住密码 </label>
+						              <a class="pull-right" href="#">忘记密码</a>
+						            </span>
+						          </div>
+						          <input class="login-btn btn btn-success" type="submit" value="登录" /> 
+						          	<div class="social pull-left">
+									       快捷登录       
+									      <a href="/login/bind/weibo?_target_path=%2Fsearch%3Fq%3D%26t%3Dcourse" class="social-login-btn">
+									      <i class="fa fa-weibo"></i>
+									    	  </a>
+									      <a href="/login/bind/qq?_target_path=%2Fsearch%3Fq%3D%26t%3Dcourse" class="social-login-btn">
+									      <i class="fa fa-qq"></i>
+									      </a>
+									      <a href="/login/bind/weixinweb?_target_path=%2Fsearch%3Fq%3D%26t%3Dcourse" class="social-login-btn">
+									      <i class="fa fa-weixin"></i>
+									      </a>
+						        		</div>				            
+						          </div>    
+						      </form>
+						</section>
+						<section id="section-topline-2">
+							<form id="register-form" class="form-vertical" method="post" action="/register?goto=%2Fsearch%3Fq%3D%26t%3Dcourse">        
+						         <div class="form-group">
+						                <label class="control-label required" for="register_emailOrMobile">常用手机号或邮箱</label>
+						                <div class="controls">
+						                    <label class="fa-label">
+						                    		<i class="fa fa-envelope"></i>
+						                    </label>
+						                    <input type="text" id="register_emailOrMobile" name="emailOrMobile" required="required" class="form-control" data-url="/register/email_or_mobile/check" placeholder="常用手机号或邮箱">
+						                    <!--<p class="help-block"></p>-->
+						                </div>
+						            </div>
+						        
+						        <div class="form-group">
+						            <label class="control-label required" for="register_nickname">昵称</label>
+						            <div class="controls">
+						                <label class="fa-label">
+						                    <i class="fa fa-user"></i>
+						                </label>
+						                <input type="text" id="register_nickname" name="nickname" required="required" class="form-control"
+						                       data-url="/register/nickname/check" placeholder="请输入昵称">
+						            </div>
+						        </div>
+						        <div class="form-group">
+						            <label class="control-label required" for="register_password">密码</label>
+						            <div class="controls">
+						               <label class="fa-label">
+						                    <i class="fa fa-unlock-alt"></i>
+						                  </label>
+						                <input type="password" id="register_password" name="password" required="required" class="form-control"
+						                       placeholder="密码">
+						            </div>
+						        </div>
+
+						        <div class="form-group">
+						                <div class="controls">
+						                    <input type="checkbox" id="user_terms" checked="checked"> 我已阅读并同意<a href="/userterms" target="_blank">《服务协议》</a>
+						                    
+						                </div>
+						        </div>
+						        <div class="form-group">
+						          <div class="controls">
+						            <button type="submit" id="register-btn " data-submiting-text="正在提交" 
+						              class="login-btn btn btn-success">注册
+						            </button>
+						          </div>
+						          <div class="social pull-left">
+									       快捷登录       
+									      <a href="/login/bind/weibo?_target_path=%2Fsearch%3Fq%3D%26t%3Dcourse" class="social-login-btn">
+									      <i class="fa fa-weibo"></i>
+									    	  </a>
+									      <a href="/login/bind/qq?_target_path=%2Fsearch%3Fq%3D%26t%3Dcourse" class="social-login-btn">
+									      <i class="fa fa-qq"></i>
+									      </a>
+									      <a href="/login/bind/weixinweb?_target_path=%2Fsearch%3Fq%3D%26t%3Dcourse" class="social-login-btn">
+									      <i class="fa fa-weixin"></i>
+									      </a>
+						        		</div>
+						        </div>
+						    </form>
+						</section>
+						<!--<section id="section-topline-3"><p>3</p></section>-->
+						<!--<section id="section-topline-4"><p>4</p></section>-->
+						<!--<section id="section-topline-5"><p>5</p></section>-->
+					</div><!-- /content -->
+				</div><!-- /tabs -->
+		</div>
+	</div>
+    </section>
+    <section class="container-fluid" style="background-color: #fafafa;">
+    	<div class="container footer">
+    		<div class="row">
+    			<div class="col-xs-6 col-sm-2 col-md-2 hidden-xs">
+    				<h4>帮助中心</h4>
+    				<ul>
+    					<li><a href="#">购买指南</a></li>
+    					<li><a href="#">支付方式</a></li>
+    					<li><a href="#">配送方式</a></li>
+    				</ul>
+    			</div>
+    			<div class="col-xs-6 col-sm-2 col-md-2 hidden-xs">
+    				<h4>服务支持</h4>
+    				<ul>
+    					<li><a href="#">终身服务</a></li>
+    					<li><a href="#">售后政策</a></li>
+    					<li><a href="#">使用帮助</a></li>
+    				</ul>
+    			</div>
+    			<div class="col-xs-6 col-sm-5 col-md-5 hidden-xs"><!--关注我们仅让非手机设备显示-->
+    				<h4>关注我们</h4>
+    				<ul>
+    					<li><a href="#">新浪微博</a></li>
+    					<li>
+						<a href="javascript:;" id="weixinpop" rel="popover" data-content="<img src='img/weixin.jpg' style='height:120px;width: 120px;'/>" data-original-title="扫描二维码">官方微信</a>
+    					</li>
+    				</ul>
+    			</div>
+    			<div class="col-xs-12 col-sm-3 col-md-3 hidden-xs">
+    				<h4>客服热线</h4>
+    				<h3><a href="tel:4000196019">400-019-6019</a></h3>
+    				<p>周一至周六(9:00-18:00)</p>
+    			</div>
+    			<!--关注我们仅让手机设备显示-->
+    			<!--<div class="col-xs-12 visible-xs text-center">
+    				<h4>帮助中心</h4>
+    				<ul class="list-inline">
+    					<li><a href="#">购买指南</a></li>
+    					<li><a href="#">支付方式</a></li>
+    					<li><a href="#">配送方式</a></li>
+    				</ul>
+    			</div>
+    			<div class="col-xs-12 visible-xs text-center">
+    				<h4>服务支持</h4>
+    				<ul class="list-inline">
+    					<li><a href="#">终身服务</a></li>
+    					<li><a href="#">售后政策</a></li>
+    					<li><a href="#">使用帮助</a></li>
+    				</ul>
+    			</div>-->
+    			<div class="col-xs-12 visible-xs text-center">
+    				<h4>关注我们</h4>
+    				<ul class="list-inline">
+    					<!--<li><a href="#">新浪微博</a></li>-->
+    					<li>
+						<img src="img/weixin.jpg" style="height: 150px;width: 150px;" />
+						<p>官方微信</p>
+    					</li>
+    				</ul>
+    			</div>
+    			<div class="col-xs-12 col-sm-3 col-md-3 visible-xs text-center">
+    				<h4>客服热线</h4>
+    				<h3><a href="tel:4000196019">400-019-6019</a></h3>
+    				<p style="line-height: normal;">周一至周六(9:00-18:00)</p>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="row">
+    	<div class="col-xs-12 col-sm-12 col-md-12 text-center" style="padding-top:15px;background-color: #C0C0C0; font-size: 12px;line-height: normal;color: #FAFAFA;font-weight: normal;">
+    			<p>copyRight@ 2016.ATMEN.All Rights Reserved.<br />京ICP备：15048483</p>
+    	</div>
+    </div>
+    </section>
+    <!--<section class="footermenu" style="background-color: #ffffff;border-top: 1px solid #E5E5E5;line-height: normal;">
+	    	<div class="container" style="width: 100%; padding-right: 0;padding-left: 0;">
+	    		<div class="col-md-4 col-xs-4 col-sm-4 text-center" style="padding-top: 5px;height: 50px;">
+	            <a href="#" title="" style="color:#F58723;font-size: 12px;display: block;"><span class="glyphicon glyphicon-home" style="font-size: 18px;"></span><br />首页</a>
+	        </div>
+	        <div class="col-md-4 col-xs-4 col-sm-4 text-center" style="padding-top: 5px;height: 50px;">
+	            <a href="#" title="" style="color:#555555;font-size: 12px;display: block;"><span class="glyphicon glyphicon-shopping-cart" style="font-size: 18px;"></span><br />购物车</a>
+	        </div>
+	        <div class="col-md-4 col-xs-4 col-sm-4 text-center" style="padding-top: 5px;height: 50px;">
+	            <a href="#" style="color:#555555; font-size: 12px;display: block;"><span class="glyphicon glyphicon-user" style="font-size: 18px;"></span><br />我的</a>
+	        </div>
+	    </div>
+    </section>-->
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.bootstrap-autohidingnavbar.js"></script>
+    <script type="text/javascript" src="js/tooltip.js" ></script>
+    <script type="text/javascript" src="js/popover.js" ></script>
+    <script type="text/javascript" src="js/wow.min.js" ></script>
+    		<script src="js/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+		</script>
+    <script>
+    //向上滚动显示导航条，现向下滚动隐藏导航条
+    $("nav.navbar-default").autoHidingNavbar();
+    //页脚微信滑动弹出二维码
+    $(function ()
+	{ $("#weixinpop").popover();
+	});
+	//wow动画调用
+	var wow = new WOW({
+		    boxClass: 'wow',
+		    animateClass: 'animated',
+		    offset: 0,
+		    mobile: true,
+		    live: true
+		});
+	wow.init();
+
+    </script>
+    
+  </body>
+</html>

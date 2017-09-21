@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    	<meta name="renderer" content="webkit">
+	    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	    <meta name="keywords" content="" />
+	    <meta name="description" content="" />
+	    <title>I Care You</title>
+	    
+	    <link rel="stylesheet" href="css/wap.bootstrap.min.css" />
+	    <link rel="stylesheet" href="css/animate.min.css" />
+	    <link rel="stylesheet" href="css/wap.css" />
+		
+		<!--[if lt IE 9]>
+	      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+    		
+	</head>
+	<body>
+  			<nav class="navbar navbar-default navbar-fixed-top">
+			  <div class="container">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="index.html"><img src="img/smartbreath.png" width="150px" /> </a>
+			    </div>
+			
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    	   <!--<ul class="nav navbar-nav navbar-right">
+				        <li><a href="#"><span class="glyphicon glyphicon-user"></span>登录/注册</a></li>
+				   </ul>-->
+			      <ul class="nav navbar-nav navbar-left">
+			        <li class=""><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
+			        <li class=""><a href="productintro.html">产品概述</a></li>
+			        <li class=""><a href="advantage.html">产品优势</a></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品详情 <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="nose.html">鼻鼻</a></li>
+			            <li><a href="brain.html">脑脑</a></li>
+			            <!--<li role="separator" class="divider"></li>-->
+			            <li><a href="paw.html">爪爪</a></li>
+			            <li><a href="cloudservice.html">云服务</a></li>
+			          </ul>
+			        </li>
+			        <li class=""><a href="app.html">APP下载</a></li>
+			        
+			        
+			      </ul>
+			      
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+	    	<article class="care">
+	    		<section class="p1" class="wow bounceIn" data-wow-duration=".8s" data-wow-delay="200ms">
+	    			<p style="font-size: 40px;font-weight: 100; margin-top: 30px;margin-bottom: 30px;">I Care You</p>
+	    			<p style="font-size: 18px;margin-bottom: 50px;">场景化新风智控解决方案</p>
+	    			<p style="font-size: 12px;line-height: 2.5em;">
+	    				在意你的呼吸，时刻监测家中空气质量<br />
+	    				在意你的健康，智能过滤清新的空气<br />
+	    				在意你的一呼一吸，在意你的所思所想
+	    			</p>
+	    		</section>
+	    	</article>
+		
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/bootstrap.min.js"></script>
+    		<script src="js/jquery.bootstrap-autohidingnavbar.js"></script>
+	    <script type="text/javascript" src="js/wow.min.js" ></script>
+	    <script>
+	    var wow = new WOW({
+					boxClass: 'wow',//需要执行动画的元素的 class
+					animateClass: 'animated',//animation.css 动画的 class
+					offset: 0,//距离可视区域多少开始执行动画
+					mobile: true,//是否在移动设备上执行动画
+					live: true   //异步加载的内容是否有效
+			});
+			wow.init();
+			//向上滚动显示导航条，现向下滚动隐藏导航条
+	    $("nav.navbar-fixed-top").autoHidingNavbar();
+
+	  	</script>
+	</body>
+</html>
